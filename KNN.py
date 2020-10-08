@@ -65,7 +65,7 @@ class KNNClassifier:
             #iterating through each of the training point to calculate distance between itself and query point
             for x_tr, y_tr in zip(self.x_train, self.y_train):
                 
-                d = eucl_distance(x, x_tr)
+                d = self.eucl_distance(x, x_tr)
                 distance_and_neighbors.append((d, y_tr))
 
             #sorting the distances and neighbors in ascending order of distance
